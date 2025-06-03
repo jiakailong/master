@@ -4,13 +4,13 @@ LUNG POINT CLOUD CLASSIFICATION EVALUATION REPORT
 
 OVERALL METRICS:
 --------------------
-Accuracy: 0.8762
-Macro-average Precision: 0.8660
-Macro-average Recall: 0.8615
-Macro-average F1-score: 0.8629
-Micro-average Precision: 0.8762
-Micro-average Recall: 0.8762
-Micro-average F1-score: 0.8762
+Accuracy: 0.8795
+Macro-average Precision: 0.8710
+Macro-average Recall: 0.8628
+Macro-average F1-score: 0.8659
+Micro-average Precision: 0.8795
+Micro-average Recall: 0.8795
+Micro-average F1-score: 0.8795
 
 PER-CLASS METRICS:
 --------------------
@@ -20,29 +20,29 @@ Class 0:
   F1-score: 0.9975
 
 Class 1:
-  Precision: 0.9802
-  Recall: 1.0000
-  F1-score: 0.9900
+  Precision: 0.9899
+  Recall: 0.9899
+  F1-score: 0.9899
 
 Class 2:
-  Precision: 0.6907
+  Precision: 0.6979
   Recall: 0.6091
-  F1-score: 0.6473
+  F1-score: 0.6505
 
 Class 3:
-  Precision: 0.7933
-  Recall: 0.8418
-  F1-score: 0.8168
+  Precision: 0.7962
+  Recall: 0.8571
+  F1-score: 0.8256
 
 DETAILED CLASSIFICATION REPORT:
 -----------------------------------
               precision    recall  f1-score   support
 
      Class 0       1.00      1.00      1.00       201
-     Class 1       0.98      1.00      0.99        99
-     Class 2       0.69      0.61      0.65       110
-     Class 3       0.79      0.84      0.82       196
+     Class 1       0.99      0.99      0.99        99
+     Class 2       0.70      0.61      0.65       110
+     Class 3       0.80      0.86      0.83       196
 
     accuracy                           0.88       606
-   macro avg       0.87      0.86      0.86       606
-weighted avg       0.87      0.88      0.87       606
+   macro avg       0.87      0.86      0.87       606
+weighted avg       0.88      0.88      0.88       606

@@ -33,12 +33,13 @@ def parse_args():
     parser.add_argument('--model', default='pointnet2_cls_msg_intensity', help='model name')
     parser.add_argument('--num_category', default=4, type=int, help='number of categories')
     parser.add_argument('--num_point', type=int, default=1024, help='Point Number')
-    parser.add_argument('--checkpoint_path', type=str, required=True, help='path to model checkpoint')
-    parser.add_argument('--use_intensity', action='store_true', default=True, help='use intensity information')
     parser.add_argument('--use_normals', action='store_true', default=False, help='use normal information')
     parser.add_argument('--process_data', action='store_true', default=False, help='save data offline')
     parser.add_argument('--use_uniform_sample', action='store_true', default=False, help='use uniform sampling')
     parser.add_argument('--output_dir', type=str, default='./evaluation_results', help='output directory for results')
+    parser.add_argument('--dataset_path', type=str, default='/media/jiang/jkl/project/dataset/lung_point_cloud', help='path to dataset')
+    parser.add_argument('--checkpoint_path', type=str, default='/media/jiang/jkl/project/Pointnet2_pytorch/log/lung_classification_msg/2025-06-03_12-58/checkpoints/best_model.pth', help='path to model checkpoint')
+    parser.add_argument('--use_intensity', action='store_true', default=True, help='use intensity information')
     return parser.parse_args()
 
 class ModelEvaluator:
@@ -78,7 +79,8 @@ class ModelEvaluator:
     
     def load_data(self):
         """Load test dataset"""
-        data_path = '/media/jiang/jkl/project/dataset/point_cloud_3dgcn_backup'
+        data_path = self.args.dataset_path
+
         test_dataset = LungDataLoader(
             root=data_path, 
             args=self.args, 
