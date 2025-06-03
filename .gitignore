@@ -1,0 +1,30 @@
+# 创建 .gitignore 文件
+cat > .gitignore << EOF
+# 数据集文件
+dataset/
+*.ply
+
+# Python 缓存文件
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# 日志文件
+*.log
+log/
+
+# 模型检查点
+*.pth
+*.pkl
+checkpoints/
+
+# IDE 文件
+.vscode/
+.idea/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+EOF
